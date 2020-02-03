@@ -1,0 +1,39 @@
+header{
+  background:fuchsia;
+  width:100%;
+  height:60px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-align: center;
+
+}
+
+input{
+  width:60%;
+  margin-top:10px;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+button{
+  height: 30px;
+  width: 20%;
+  background-color: rgb(238, 65, 123);
+  border-radius: 10px;
+  border:none;
+  color:white;
+  font-weight: bold;;
+}
+
+li{
+  margin-top: 10px;;
+  border: solid 2px fuchsia;
+  list-style: none;
+  height:40px;
+  width: 60%;
+  border-radius: 10px;;
+  text-align: center;
+  padding-top: 10px;;
+}
+
