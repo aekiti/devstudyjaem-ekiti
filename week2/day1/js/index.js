@@ -72,7 +72,7 @@ async function windowsLoaded() {
     memeImage.src=myArr[i][1]['url'];
 
     let aeInput=document.createElement('input');
-    aeInput.placeholder="Enter Meme url" 
+    aeInput.placeholder="Enter Vote Amount" 
     
     let voteButton=document.createElement('button');
     voteButton.innerText="Vote"
