@@ -6,25 +6,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Todo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
-      <input id="my-input" type="text">
-      <button id="add-btn">Add</button>
-    </header>
+    <div>
+      <button id="create-account">Create Account</button>
+      <button id="have-account">Have An Account</button>
+    </div>
 
-    <section>
-      <ul id="my-ul"></ul>
-    </section>
-    
-    <script src="js/index.js"></script>
+    <div id="loader" class="loader"></div>
+
+    <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script>  
+    <script src="js/authenticate.js"></script>
   </body>
 </html>

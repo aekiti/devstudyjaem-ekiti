@@ -1,0 +1,17 @@
+contract TodoList=
+  record state={
+    users:map(address,list(string)) }
+
+  stateful entrypoint init()={users={}}
+
+  stateful entrypoint initializeList()=
+    let newList=[]
+    put(state{users[Call.caller]=newList})        
+
+  stateful entrypoint addTodo(todo':string)=
+    let oldList=state.users[Call.caller]
+    let newList= todo'::oldList
+    put(state{users[Call.caller]=newList})
+      
+  entrypoint getTodo()=
+    state.users[Call.caller]

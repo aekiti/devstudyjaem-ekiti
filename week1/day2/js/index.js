@@ -1,7 +1,7 @@
 document.getElementById("add-btn").addEventListener('click',function(){
 let myInputValue=document.getElementById("my-input").value;
 if(myInputValue.trim()===""){
-  alert("youn must write something");
+  alert("you must write something");
  
 }else{
   createNewTodoItem(myInputValue);

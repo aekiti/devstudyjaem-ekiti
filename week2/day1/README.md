@@ -4,7 +4,7 @@
 
 ## Settings
 
-Submit memes and vote on memes with aeons(aeternity token).
+Submit memes and vote on memes with æons(æternity token).
 
 * On mobile (or developer mode mobile device view) go to [{https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week2/day1/](https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week2/day1/)
 * Click on settings, then network and select the Testnet.

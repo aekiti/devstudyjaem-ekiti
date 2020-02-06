@@ -1,5 +1,5 @@
 header{
-  background:fuchsia;
+  background:#f7296e;
   width:100%;
   height:60px;
   border-bottom-left-radius: 10px;
@@ -28,7 +28,7 @@ button{
 
 li{
   margin-top: 10px;;
-  border: solid 2px fuchsia;
+  border: solid 2px #f7296e;
   list-style: none;
   height:40px;
   width: 60%;
