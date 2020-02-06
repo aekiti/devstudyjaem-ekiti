@@ -6,6 +6,6 @@
 
 <center>
 
-[![devstudyjaem master slide](https://img.youtube.com/vi/Sl3K1_QR1Go/0.jpg)](https://docs.google.com/presentation/d/12jNSyLRr-vgZx5ESNKsHtd6opoRyKD5WhgaWACKz3jw/edit?usp=sharing "devstudyjaem master slide")
+<a href="https://docs.google.com/presentation/d/12jNSyLRr-vgZx5ESNKsHtd6opoRyKD5WhgaWACKz3jw/edit?usp=sharing" target="_blank" title="devstudyjaem master slide"><img src="https://i.ibb.co/JFqGRxw/aekiti-devstudyj-m-thumbnail-Youtube.png" alt="devstudyjaem master slide"></a>
 
 </center>

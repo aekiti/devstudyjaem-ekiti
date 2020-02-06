@@ -4,7 +4,7 @@
 
 <center>
 
-[![dacade review](https://img.youtube.com/vi/Sl3K1_QR1Go/0.jpg)](https://www.youtube.com/watch?v=Sl3K1_QR1Go&list=PLVz98HTQCJzTKvzvkQ1HEpztUL1XmS59H "dacade review")
+<a href="https://www.youtube.com/watch?v=Sl3K1_QR1Go&list=PLVz98HTQCJzTKvzvkQ1HEpztUL1XmS59H" target="_blank" title="dacade review"><img src="https://img.youtube.com/vi/Sl3K1_QR1Go/0.jpg" alt="dacade review"></a>
 
 </center>
 
