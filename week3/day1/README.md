@@ -8,6 +8,6 @@
 
 <a href="https://aekiti.github.io/devstudyjaem-ekiti/week3/day1/" target="_blank" title="book">https://aekiti.github.io/devstudyjaem-ekiti/week3/day1/</a>
 
-## Settings
+### Settings
 
-* On mobile (or developer mode mobile device view) go to <a href="https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week2/day2/" target="_blank" title="base aepp todo">https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week2/day2/</a> to see books from the librarian
+* On mobile (or developer mode mobile device view) go to <a href="https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week3/day1/" target="_blank" title="base aepp todo">https://base.aepps.com/#/browser/aekiti.github.io/devstudyjaem-ekiti/week3/day1/</a> to see books from the librarian

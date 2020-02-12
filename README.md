@@ -12,6 +12,8 @@ This repository helps to document what was taught to the jæmers for revision an
 * [Week 2](week2)
   * [Day 1](week2/day1)
   * [Day 2](week2/day2)
+* [Week 3](week3)
+  * [Day 1](week3/day1)
 
 ## Other Links
 

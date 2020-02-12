@@ -59,20 +59,22 @@ window.addEventListener('load', async () => {
 
   allBooks = (await contractInstance.methods.getAllBooks()).decodedResult;
 
+  console.log(allBooks)
+
   for (let i in allBooks) {
+    console.log(allBooks[i])
+    // const book = (await contractInstance.methods.getBook(i)).decodedResult;
 
-    const book = (await contractInstance.methods.getBook(i)).decodedResult;
-
-    bookArray.push({
-      bookImage: book.image,
-      bookTitle: book.title,
-      bookAuthor: book.author,
-      bookIsbn: i,
-      bookUrl: book.url,
-    })
+    // bookArray.push({
+    //   bookImage: book.image,
+    //   bookTitle: book.title,
+    //   bookAuthor: book.author,
+    //   bookIsbn: i,
+    //   bookUrl: book.url,
+    // })
   }
 
-  renderBooks();
+  // renderBooks();
   $("#loader").hide();
 });
 
