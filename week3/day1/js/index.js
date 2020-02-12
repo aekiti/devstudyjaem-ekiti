@@ -59,22 +59,18 @@ window.addEventListener('load', async () => {
 
   allBooks = (await contractInstance.methods.getAllBooks()).decodedResult;
 
-  console.log(allBooks)
-
   for (let i in allBooks) {
     const book = allBooks[i]
 
-    console.log(i + ': ' + book.title);
-    // bookArray.push({
-    //   bookImage: book.image,
-    //   bookTitle: book.title,
-    //   bookAuthor: book.author,
-    //   bookIsbn: i,
-    //   bookUrl: book.url,
-    // })
+    bookArray.push({
+      bookImage: book[1]['image'],
+      bookTitle: book[1]['title'],
+      bookAuthor: book[1]['author'],
+      bookUrl: book[1]['url'],
+    })
   }
 
-  // renderBooks();
+  renderBooks();
   $("#loader").hide();
 });
 
