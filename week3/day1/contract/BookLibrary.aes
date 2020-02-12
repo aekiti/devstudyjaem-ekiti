@@ -1,0 +1,40 @@
+contract BookLibrary=
+
+  record book = {
+    title:string,
+    author:string,
+    image:string,
+    url:string }
+    
+  record state = {
+    books:map(string,book),
+    totalBookCount:int,
+    librarian:address }
+
+  entrypoint init() = {
+    books={},
+    totalBookCount=0,
+    librarian = Call.caller }
+
+  function requirement(exp : bool, err : string) =
+    if(!exp)
+        abort(err)
+
+  entrypoint onlylibrarian() : bool =
+    requirement(state.librarian ==ak_2FuPqTvcRSQaPznxboDKSQRJUpmBUGJz7nrWV1CmySbAf2FsDE, "Not Authorized")
+    true
+
+  entrypoint getTotalBookCount()=
+    state.totalBookCount
+  
+  stateful entrypoint addBook(title':string, author':string, image':string, url':string, isbn:string) =
+    onlylibrarian()
+    let newBook = {title=title',author=author',image=image', url=url'}
+    let index = getTotalBookCount() + 1
+    put(state{books[isbn]=newBook,totalBookCount=index})
+    
+  entrypoint getBook(isbn)=
+    state.books[isbn]
+    
+  entrypoint getAllBooks()=
+    state.books

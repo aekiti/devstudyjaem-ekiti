@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book Library æpp</title>
+    <meta name="description" content="Book Library æpp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="navbar navbar-expand-md bg-color navbar-dark fixed-top">
+      <a class="navbar-brand" href="#">Book Library æpp</a>
+    
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#add">Add Book</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#list">Book List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="https://github.com/aekiti/devstudyjaem-ekiti/tree/master/week3/day1" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="container section-spacer">
+      <div id="loader" class="loader"></div>
+      <div id="add" class="my-4">
+        <h3>Add Book(Librarian Only)</h3>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="form-group col">
+              <input type="text" class="form-control" id="btitle" placeholder="Book Title" name="btitle" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please enter a book title.</div>
+            </div>
+            <div class="form-group col">
+              <input type="text" class="form-control" id="bauthor" placeholder="Book Author" name="bauthor" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please enter a book author.</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col">
+              <input type="url" class="form-control" id="bimage" placeholder="Book Image URL" name="bimage" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please enter a book image url.</div>
+            </div>
+            <div class="form-group col">
+              <input type="text" class="form-control" id="bisbn" placeholder="Book ISBN" name="bisbn" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please enter a book isbn.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="url" class="form-control" id="burl" placeholder="Book Url" name="burl" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please enter a book url.</div>
+          </div>
+          <div class="text-center">
+            <button id="add-book" class="btn bg-color">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="list">
+        <h3>Book List<span id="totalBooks"></span></h3>
+        <div class="row my-4">
+          <div id="allBooks"></div>
+        </div>
+      </div>
+    </section>
+    
+    <script id="bookCard" type="x-tmpl-mustache">
+      {{#bookArray}}
+        <div class="card col-6">
+          <img class="card-img-top" src="{{bookImage}}" alt="{{bookTitle}}">
+          <div class="card-body">
+            <h4 class="card-title color">{{bookTitle}}</h4>
+            <p class="card-text"><i class="fas fa-user"></i> {{bookAuthor}}</p>
+            <p class="card-text"><i class="fas fa-book"></i> {{bookIsbn}}</p>
+            <a href="{{bookUrl}}" class="btn color stretched-link">See Book</a>
+          </div>
+        </div>
+      {{/bookArray}}
+    </script>
+    <script>
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          var forms = document.getElementsByClassName('needs-validation');
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
