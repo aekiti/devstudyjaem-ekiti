@@ -62,9 +62,9 @@ window.addEventListener('load', async () => {
   console.log(allBooks)
 
   for (let i in allBooks) {
-    console.log(allBooks[i])
-    // const book = (await contractInstance.methods.getBook(i)).decodedResult;
+    const book = allBooks[i]
 
+    console.log(i + ': ' + book.title);
     // bookArray.push({
     //   bookImage: book.image,
     //   bookTitle: book.title,
