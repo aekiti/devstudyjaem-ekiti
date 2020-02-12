@@ -40,7 +40,7 @@ contract BookLibrary=
   entrypoint getAllBooks()=
     state.books
 `;
-const contractAddress="ct_2EUr87rhXVAYPuBEJwzCvHukEZhAdrtC4vWbZcnsGrJQ7zytyy";
+const contractAddress="ct_2RmQ7VL4Ff4Gx6zo1415aErQgC3ZZuJWqGvHxK7zBRD7xeRJow";
 
 let client = null, contractInstance = null, allBooks, bookArray = [], totalBook = 0;
 
@@ -83,7 +83,12 @@ $('#add-book').click(async function(){
         isbn = ($('#bisbn').val()),
         url = ($('#burl').val());
 
-  await contractInstance.methods.addBook(title, author, image, url, isbn).catch(console.error);
-
-  location.reload();
+  await contractInstance.methods.addBook(title, author, image, url, isbn)
+  .catch(function(error) {
+    console.log(error)
+    stop();
+  })
+  .then(function() {
+    location.reload();
+  });
 });
