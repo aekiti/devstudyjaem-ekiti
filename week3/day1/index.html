@@ -88,11 +88,12 @@
     
     <script id="bookCard" type="x-tmpl-mustache">
       {{#bookArray}}
-        <div class="card col-6">
+        <div class="card my-3">
           <img class="card-img-top" src="{{bookImage}}" alt="{{bookTitle}}">
           <div class="card-body">
             <h4 class="card-title color">{{bookTitle}}</h4>
             <p class="card-text"><i class="fas fa-user"></i> {{bookAuthor}}</p>
+            <p class="card-text"><i class="fas fa-book"></i> {{bookIsbn}}</p>
             <a href="{{bookUrl}}" class="btn color stretched-link">See Book</a>
           </div>
         </div>

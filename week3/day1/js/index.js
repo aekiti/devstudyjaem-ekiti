@@ -66,6 +66,7 @@ window.addEventListener('load', async () => {
       bookImage: book[1]['image'],
       bookTitle: book[1]['title'],
       bookAuthor: book[1]['author'],
+      bookIsbn: book[0],
       bookUrl: book[1]['url'],
     })
   }
@@ -82,7 +83,7 @@ $('#add-book').click(async function(){
         isbn = ($('#bisbn').val()),
         url = ($('#burl').val());
 
-  await contractInstance.methods.addBook(title, author, image, url, isbn);
+  await contractInstance.methods.addBook(title, author, image, url, isbn).catch(console.error);
 
   location.reload();
 });
