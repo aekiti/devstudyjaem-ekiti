@@ -1,0 +1,81 @@
+<html>
+    <head>
+ <link rel="stylesheet" href="./css/index.css">
+ <style>
+      #addbook-container{
+        border: solid 2px #ccc;
+        width:400px;
+        height:200px;
+        margin:0 auto;
+        text-align: center;
+      }
+      input{
+        width: 300px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;;
+        border: solid 1px palevioletred;
+        margin-top: 10px;
+        text-align: center;
+      }
+      button{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: antiquewhite;
+      
+      }
+      p{
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      
+    </style>
+    </head>
+    <body>
+    <div id="loader" class="loaderi"></div>
+    <div id="addbook-container">
+        <input id="book-name" type="text" placeholder="enter name of book">
+        <button id="btn-submit">Submit</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+    apiKey: "AIzaSyAgEYBNaHRUWknRIzrWkKprGK7YWqoYB9o",
+    authDomain: "uploadanyfiletofirebase.firebaseapp.com",
+    databaseURL: "https://uploadanyfiletofirebase.firebaseio.com",
+    projectId: "uploadanyfiletofirebase",
+    storageBucket: "uploadanyfiletofirebase.appspot.com",
+    messagingSenderId: "496464657048",
+    appId: "1:496464657048:web:a7df51cad487267aec6eed"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+    document.getElementById("loader").style.display="none";
+    document.getElementById("btn-submit").addEventListener("click",function(){
+        console.log("button");
+        document.getElementById("loader").style.display="block";
+    const bookname=document.getElementById("book-name").value;
+        firebase.firestore().collection("requests").add({
+            bookname:bookname
+                })
+                .then(function() {
+
+                    document.getElementById("loader").style.display="none";
+                    window.location.href="./library.html";
+                     console.log("Document successfully written!");
+            })
+            .catch(function(error) {
+                document.getElementById("loader").style.display="none";
+            console.error("Error writing document: ", error);
+                });
+    });
+    </script>
+    </body>
+</html>

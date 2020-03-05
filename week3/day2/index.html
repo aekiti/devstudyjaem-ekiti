@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+      #login-container{
+        border: solid 2px #ccc;
+        width:400px;
+        height:200px;
+        margin:0 auto;
+        text-align: center;
+      }
+      input{
+        width: 300px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;;
+        border: solid 1px palevioletred;
+        margin-top: 10px;
+        text-align: center;
+      }
+      button{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 10px;
+        background-color: antiquewhite;
+      
+      }
+      p{
+        cursor: pointer;
+        margin-top: 5px;
+      }
+      
+    </style>
+   
+  </head>
+  <body>
+  <div id="loader" class="loaderi"></div>
+    <div id="login-container">
+       <input id="email-field" type="email" placeholder="Enter email">
+      <input id="password-field" type="password" placeholder="Enter Password">
+      <button id="submit">Sign in</button>
+
+      <p id="switch">Switch to sign up</p>
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script src="js/signin.js">
+     
+    </script>
+  </body>
+</html>
