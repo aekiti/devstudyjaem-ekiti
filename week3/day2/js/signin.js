@@ -1,12 +1,4 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyAgEYBNaHRUWknRIzrWkKprGK7YWqoYB9o",
-    authDomain: "uploadanyfiletofirebase.firebaseapp.com",
-    databaseURL: "https://uploadanyfiletofirebase.firebaseio.com",
-    projectId: "uploadanyfiletofirebase",
-    storageBucket: "uploadanyfiletofirebase.appspot.com",
-    messagingSenderId: "496464657048",
-    appId: "1:496464657048:web:a7df51cad487267aec6eed"
-  };
+var firebaseConfig =_{}
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
