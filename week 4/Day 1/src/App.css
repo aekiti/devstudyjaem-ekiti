@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.Input{
+  margin:10px auto;
+  width: 200px;
+  border: solid 2px orange;
+  border-radius: 10px;
+  padding-left: 20px;
+  height: 30px;
+  display: block;
+}
+
+p{
+  cursor: pointer;
+}
