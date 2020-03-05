@@ -1,0 +1,26 @@
+{
+  "homepage": "http://jesulonimi21.github.io/AekitiChat",
+  "name": "aekiti_chat",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aeternity/aepp-sdk": "^6.0.0",
+    "buffer": "^5.4.3",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^7.1.3",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
