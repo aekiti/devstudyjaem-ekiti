@@ -1,0 +1,47 @@
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Book Library æpp</title>
+            <meta name="description" content="Book Library æpp">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div class="all-body">
+        <div id="loader" class="loader"></div>
+        <div class="header">
+            <p>Book Library æpp</p>
+            <div id="nav-toggle" class="navToggle">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div id="header-options" class="header-options close-nav">
+            <p><a href="#add-book" id="addBook">Add book</a></p>
+            <p><a href="#book-list" id="bookList">Book List</a></p>
+        </div>
+        
+        
+
+        <div id="add-book">
+                <p class="add-books-divider">Add Books</p>
+            <input id="input-title" type="text" placeholder="Book Title">
+            <input id="input-isbn" type="text" placeholder="Book ISBN">
+            <button id="submit-book">Submit</button>
+        </div>
+
+        <h4 class="list-of-books">List Of Available Books</h4>
+        <div id="all-books">
+           
+        </div>
+        </div>
+                <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script> 
+           <script src="./js/index.js">
+             
+           </script> 
+    </body>
+</html>

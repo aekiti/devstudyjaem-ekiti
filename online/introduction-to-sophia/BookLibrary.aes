@@ -1,0 +1,20 @@
+contract BookLibrary=
+    record bookInfo={
+        name:string,
+        isbn:string,
+        date: string
+        }
+    record state={
+        listOfBooks:map(address,list(bookInfo))
+        }
+
+    stateful entrypoint init()={listOfBooks={}}
+
+    stateful entrypoint registerBooks(name':string,isbn':string,date':string)=
+        let newBook={name=name',isbn=isbn',date=date'}
+        let bookList=Map.lookup_default(Call.caller,state.listOfBooks,[])
+        let newBookList= newBook::bookList
+        put(state{listOfBooks[Call.caller]=newBookList})
+           
+    entrypoint getBooks()=
+        Map.lookup_default(Call.caller,state.listOfBooks,[])
