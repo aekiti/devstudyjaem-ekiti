@@ -1,4 +1,4 @@
-# Developer Study Jæm - Ekiti State
+# [Developer Study Jæm - Ekiti State](https://aekiti.github.io/devstudyjaem-ekiti)
 
 Developer Study Jæm - Ekiti State is aimed at gathering developers from the various tech community in Ekiti State, Nigeria to develop remarkable solutions using <a href="https://aeternity.com" target="_blank" title="æternity">æternity</a> technologies. Learn more at <a href="https://aekiti.com" target="_blank" title="ækiti">https://aekiti.com</a>.
 
@@ -6,6 +6,9 @@ This repository helps to document what was taught to the jæmers for revision an
 
 ## Inner Links
 
+* [Online Session](online)
+  * [Introduction to Sophia](introduction-to-sophia)
+  * [Integrating SmartContracts](integrating-smartcontracts)
 * [Week 1](week1)
   * [Day 1](week1/day1)
   * [Day 2](week1/day2)
@@ -14,6 +17,10 @@ This repository helps to document what was taught to the jæmers for revision an
   * [Day 2](week2/day2)
 * [Week 3](week3)
   * [Day 1](week3/day1)
+  * [Day 2](week3/day2)
+* [Week 4](week4)
+* [Week 5](week5)
+* [Week 6](week6)
 
 ## Other Links
 
