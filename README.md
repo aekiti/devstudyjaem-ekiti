@@ -9,6 +9,7 @@ This repository helps to document what was taught to the jæmers for revision an
 * [Online Session](online)
   * [Introduction to Sophia](introduction-to-sophia)
   * [Integrating SmartContracts](integrating-smartcontracts)
+  * [Interplantary File System(IPFS)](interplantary-file-system)
 * [Week 1](week1)
   * [Day 1](week1/day1)
   * [Day 2](week1/day2)
@@ -21,6 +22,8 @@ This repository helps to document what was taught to the jæmers for revision an
 * [Week 4](week4)
 * [Week 5](week5)
 * [Week 6](week6)
+* [Week 7](week7)
+* [Week 8](week8)
 
 ## Other Links
 

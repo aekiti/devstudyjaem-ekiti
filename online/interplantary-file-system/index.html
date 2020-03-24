@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Book Library Aepp</title>
+
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="all-body">
+    <div id="loader" class="loader"></div>
+    <div class="header">
+      <p>Book Library aepp</p>
+
+      <div id="nav-toggle" >
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="header-options" class="close-nav">
+      <p id="addBook"><a href="#add-books-section">Add Book</a></p>
+      <p id="viewBooks"><a href="#list-books-section">Book List</a></p>
+    </div>
+
+    <div id="add-books-section">
+      <input id="input-title" placeholder="Book Title"/>
+      <input id="input-isbn" placeholder="Book ISBN"/>
+      <input id="input-date"placeholder="Date"/>
+      <input id="input-image" type="file" />
+
+      <button id="submit-book">Submit</button>
+    </div>
+
+    <div id="list-books-section">
+      <p>List Of Available Books</p>
+      <div class="book">
+        <img src="">
+        <div>
+          <p>Book name</p>
+          <p>Book isbn</p> 
+        </div>   
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script>
+  <script src="js/ipfs-mini.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
